@@ -27,7 +27,7 @@ export function getRoutes() {
     
     const patientController = new PatientController();
 
-    router.get('/patient', patientController.getAll);
+    router.get('/patients', patientController.getAll);
     router.get('/patient/:taj', patientController.getOne);
     router.post('/patient', patientController.create);
     router.put('/patient', patientController.update);

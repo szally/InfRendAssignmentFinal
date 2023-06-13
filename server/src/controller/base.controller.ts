@@ -3,10 +3,13 @@ import { Repository } from "typeorm";
 export abstract class Controller {
     repository: Repository<any>;
 
+ 
+
     getAll = async (req, res) => {
         try {
             const entities = await this.repository.find();
-            res.json(entities);
+            console.log(entities.length);
+            res.send(entities);
         } catch (err) {
             this.handleError(res, err);
         }

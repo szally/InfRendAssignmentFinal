@@ -10,7 +10,7 @@ export class PatientService {
   constructor(private http: HttpClient) { }
 
   getAll() {
-    return this.http.get<PatientDTO[]>('/api/patients');
+    return this.http.get<PatientDTO[]>('http://localhost:2000/api/patients');
   }
 
   getOne(taj: number) {
